@@ -64,6 +64,11 @@
 				msg.text("Veuillez saisir un code de " + maxTouches + " chiffres.");
 			}
 			return false;
+			icode.val(vdef);
+      			nbTouches = 0;
+          		activecases.each(function () {
+            			$(this).text(""); 
+         		});
 		}
 
 		function remplirClavierNum() {
@@ -74,14 +79,6 @@
 				$(this).text(numbers[index]);
 			});
 		}
-		function shuffleArray(array) {
-			for (var i = array.length - 1; i > 0; i--) {
-				var j = Math.floor(Math.random() * (i + 1));
-				[array[i], array[j]] = [array[j], array[i]];
-			}
-			return array;
-		}
-
 		$(document).ready(init);
 	</script>
 </head>
